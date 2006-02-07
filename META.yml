@@ -1,0 +1,20 @@
+
+abstract: Numbers with error propagation and scientific rounding
+author: Steffen Mueller <modules at steffen-mueller dot net>, L<http://steffen-mueller.net/>
+build_requires: 
+  Test::More: 0.47
+distribution_type: module
+generated_by: Module::Install version 0.55
+license: perl
+name: Number-WithError
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  Math::BigFloat: 0
+  Math::SymbolicX::Inline: 1.00
+  Params::Util: 0.10
+  perl: 5.6.0
+  prefork: 1.00
+version: 0.01

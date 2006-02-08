@@ -6,7 +6,9 @@ requires       'Params::Util'            => '0.10';
 requires       'prefork'                 => '1.00';
 requires       'Math::BigFloat'          => '0';
 requires       'Math::SymbolicX::Inline' => '1.00';
-build_requires 'Test::More'              => '0.47';
 
-#auto_install;
+build_requires 'Test::More'              => '0.47';
+build_requires 'Test::LectroTest'        => '0';
+
+auto_install;
 WriteAll;

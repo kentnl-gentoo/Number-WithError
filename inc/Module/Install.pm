@@ -1,4 +1,4 @@
-#line 1 "/home/tsee/data/perl/mrsci/inc/Module/Install.pm - /usr/lib/perl5/site_perl/5.8.6/Module/Install.pm"
+#line 1 "/home/tsee/data/perl/other/module/numerr/inc/Module/Install.pm - /usr/lib/perl5/site_perl/5.8.6/Module/Install.pm"
 package Module::Install;
 
 use 5.004;

@@ -1,5 +1,8 @@
 Revision history for Perl extension Number::WithError.
 
+0.02  Wed Feb  8 17:48:14 2006
+	- Added a dependency on Test::LectroTest for the build.
+
 0.01  Sat Jan 29 17:07:51 2006
 	- original version as uploaded to CPAN
 

@@ -1,8 +1,14 @@
 Revision history for Perl extension Number::WithError.
 
-0.02  Wed Feb  8 17:48:14 2006
+0.03  Sun Feb 18 19:46 2006
+	- Fixed bug in raw_error().
+	- Added as_array() which returns the representation as accepted by the
+	  constructor.
+	- Improved test coverage.
+
+0.02  Wed Feb  8 17:48 2006
 	- Added a dependency on Test::LectroTest for the build.
 
-0.01  Sat Jan 29 17:07:51 2006
+0.01  Sat Jan 29 17:07 2006
 	- original version as uploaded to CPAN
 

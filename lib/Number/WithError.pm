@@ -6,7 +6,7 @@ use warnings;
 use Params::Util qw/_ARRAY _INSTANCE _ARRAY0/;
 use prefork 'Math::BigFloat';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use base 'Exporter';
 our @EXPORT_OK = qw(
@@ -1274,8 +1274,33 @@ might break with future releases.
 
 sub raw_error{
 	my $self = shift;
-	return $self->{error};
+	return $self->{errors};
 }
+
+=head2 as_array
+
+This method returns the information stored in the object as an array
+(i.e. a list in this context)
+which can be passed to the C<new()> method to recreate the object.
+
+The first element of the return list will be the number itself. If the
+object uses C<Math::BigFloat> for the internal representation, this
+element will be a copy of the internal object. Otherwise, it will be the
+internal representation of the number with full precision.
+
+Following the number will be all errors either as numbers, C<Math::BigFloat>
+objects or arrays containing two asymmetric errors. (Either as numbers or
+objects as explained above.) The data returned by this method will be
+copied deeply before being returned.
+
+=cut
+
+sub as_array {
+	my $self = shift;
+	my $copy = $self->new;
+	return( $copy->{num}, @{$copy->{errors}} );
+}
+
 
 ############################################
 

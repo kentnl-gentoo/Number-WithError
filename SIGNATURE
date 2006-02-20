@@ -1,0 +1,49 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.53.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 2e69ceca44e9021ab67d8a51bff1955132300d7e Changes
+SHA1 591614771cc3aa9945da4045b1d38a7d9e79057d MANIFEST
+SHA1 7951601cd3af2d65fb3072c0b98e29957d33e7be META.yml
+SHA1 ec1ca2d4b43a3897ca2a235f482b6a6fadced331 Makefile.PL
+SHA1 b6f18a9d38bf73ec2c50a7efaf8bb18340ad9b49 README
+SHA1 7c4c900481d5d3d8c979999d11be84f8ade56cdb inc/Module/AutoInstall.pm
+SHA1 40b2a1b3c11a133216fa30b37027dabe237fe36f inc/Module/Install.pm
+SHA1 b43b16d0562926a60ebe71e72d6d23da94c1d011 inc/Module/Install/AutoInstall.pm
+SHA1 08705de1d92096e40b815fbe103f5ef820d98202 inc/Module/Install/Base.pm
+SHA1 852bba01c964cf2501d15577ffc0678501d10760 inc/Module/Install/Can.pm
+SHA1 57d3ef2e95eb21b4426e54fcefd6ea3d34d16b35 inc/Module/Install/Fetch.pm
+SHA1 144e5bfc69327edd6a3cdddd12ea9baf8258c9ca inc/Module/Install/Include.pm
+SHA1 31707ee5cb077d316361604e30d4eeb527a49e26 inc/Module/Install/Makefile.pm
+SHA1 9baeb2f4f4c92f67f1e0d7be4e370af5019d9bb5 inc/Module/Install/Metadata.pm
+SHA1 07940a52a61b1456023751be6bffa012fe1186ab inc/Module/Install/Win32.pm
+SHA1 9aeb39d66698a45e1f997e1536bda96183a4ba3d inc/Module/Install/WriteAll.pm
+SHA1 08af08855ce0c24b0d85a125bf168c3c52c45b7a lib/Number/WithError.pm
+SHA1 bb0da54f2b3f2d7955baa41ee458cb3d1887f475 t/00pod.t
+SHA1 2db32c1aac44c2e41530ea63431166d91bd458bf t/00podcover.t
+SHA1 73cd3d58f952c7c83995eeb6d494996af582088b t/01compile.t
+SHA1 d7d73b785f95cd42f64f8a875b45dfc548e1493d t/02constructor.t
+SHA1 feb0dd6e579940f61130cacb0c7b1eabfbe4fcbc t/03round.t
+SHA1 9f10a9583590d135311439bb7aadb3a914f88cf3 t/04arith.t
+SHA1 1c9fcf3ab1fe7fce388c5e80139401477a0c4dbd t/05functions.t
+SHA1 12bdf425d9e691a091a528974781f645d791b648 t/06err.t
+SHA1 eaee014ef96482b52852670bb870aa4c6e790ada t/07asarray.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFD+crYZCuimE51gxcRAmGrAJ4q9l5vv47wQN44FgQoMquqIM89iACfehxr
+21WXKXHLv8ZZV9aIO1RWDwQ=
+=6Qwy
+-----END PGP SIGNATURE-----

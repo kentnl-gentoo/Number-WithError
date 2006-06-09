@@ -26,10 +26,16 @@ use Params::Util qw/_INSTANCE/;
 BEGIN {
 	require Test::LectroTest;
    	if (defined $ENV{PERL_TEST_ATTEMPTS}) {
-		Test::LectroTest->import(trials => $ENV{PERL_TEST_ATTEMPTS}+0);
+		Test::LectroTest->import(
+			trials => $ENV{PERL_TEST_ATTEMPTS}+0,
+			regressions => catdir('t', 'regression.txt')
+		);
 	}
 	else {
-		Test::LectroTest->import(trials => 100);
+		Test::LectroTest->import(
+			trials => 100,
+			regressions => catdir('t', 'regression.txt')
+		);
 	}
 }
 

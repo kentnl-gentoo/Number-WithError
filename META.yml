@@ -1,11 +1,10 @@
-
 abstract: Numbers with error propagation and scientific rounding
 author: Steffen Mueller <modules at steffen-mueller dot net>, L<http://steffen-mueller.net/>
 build_requires: 
   Test::LectroTest: 0
   Test::More: 0.47
 distribution_type: module
-generated_by: Module::Install version 0.56
+generated_by: Module::Install version 0.63
 license: perl
 name: Number-WithError
 no_index: 
@@ -18,4 +17,4 @@ requires:
   Params::Util: 0.10
   perl: 5.6.0
   prefork: 1.00
-version: 0.03
+version: 0.05

@@ -25,3 +25,4 @@ t/04arith.t
 t/05functions.t
 t/06err.t
 t/07asarray.t
+t/regression.txt

@@ -1,21 +1,26 @@
 Revision history for Perl extension Number::WithError.
 
+0.06  Wed Aug 30 2006
+  - Upgrade to Module::Install 0.64.
+  - Removed SIGNATURE because Module::Signature is still broken.
+  - Removed auto_install from Makefile.PL
+
 0.05  Fri Jun  9 2006
-	- Upgrade Module::Install to 0.63 to reclaim win32.
+  - Upgrade Module::Install to 0.63 to reclaim win32.
 
 0.04  Sat Mar  4 2006
-	- Now using Test::LectroTest's new feature to record past test failures.
-	  Shipping with an example database called 'regression.txt'.
+  - Now using Test::LectroTest's new feature to record past test failures.
+    Shipping with an example database called 'regression.txt'.
 
 0.03  Sun Feb 18 2006
-	- Fixed bug in raw_error().
-	- Added as_array() which returns the representation as accepted by the
-	  constructor.
-	- Improved test coverage.
+  - Fixed bug in raw_error().
+  - Added as_array() which returns the representation as accepted by the
+    constructor.
+  - Improved test coverage.
 
 0.02  Wed Feb  8 2006
-	- Added a dependency on Test::LectroTest for the build.
+  - Added a dependency on Test::LectroTest for the build.
 
 0.01  Sat Jan 29 2006
-	- original version as uploaded to CPAN
+  - original version as uploaded to CPAN
 

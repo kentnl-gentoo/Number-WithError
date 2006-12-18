@@ -1,5 +1,9 @@
 Revision history for Perl extension Number::WithError.
 
+0.07  Mon Dec 18 2006
+  - Refactor constructor tests.
+  - Remove dependency on Math::SymbolicX::Inline.
+
 0.06  Wed Aug 30 2006
   - Upgrade to Module::Install 0.64.
   - Removed SIGNATURE because Module::Signature is still broken.

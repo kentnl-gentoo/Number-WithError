@@ -6,7 +6,7 @@ use warnings;
 use Params::Util qw/_ARRAY _INSTANCE _ARRAY0/;
 use prefork 'Math::BigFloat';
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use base 'Exporter';
 our @EXPORT_OK = qw(
@@ -21,9 +21,11 @@ our $CFloat = qr/[+-]?(?=\d|\.\d)\d*(?:\.\d*)?(?:[Ee][+-]?\d+)?/;
 our $CFloatCapture = qr/([+-]?)(?=\d|\.\d)(\d*)(\.\d*)?([Ee][+-]?\d+)?/;
 
 # define function "tan"
-use Math::SymbolicX::Inline <<'HERE';
-my_tan = tan(arg0)
-HERE
+#use Math::Symbolic;
+#use Math::SymbolicX::Inline <<'HERE';
+#HERE
+#my_tan = tan(arg0)
+sub _my_tan { return CORE::sin($_[0]) / CORE::cos($_[0]) }
 
 =head1 NAME
 
@@ -944,7 +946,7 @@ Formula: C<c = tan(a)>
 
 Error Propagation: C<err-c = sqrt( err-a^2 / cos(a)^4 ) = abs( err-a / cos(a)^2 )>
 
-Since there is no built-in C<tan()> function, this operation is not availlable via
+Since there is no built-in C<tan()> function, this operation is not available via
 the overloaded interface.
 
 =cut
@@ -958,7 +960,7 @@ sub tan {
 	my $errs = [];
 	my $res = {errors => $errs};
 	
-	$res->{num} = my_tan($n1);
+	$res->{num} = _my_tan($n1);
 
 	my $l1 = $#$e1;
 
@@ -1047,6 +1049,7 @@ sub _round {
 	my $num = ref($number) ? $number->copy() : $number;
 	
 	return $num if not defined $digit;
+    return $num if $num =~ /^nan$/i;
 
 #	if (ref($num)) {	
 #		my $rounded = $num->ffround($digit, 'odd')->bsstr();
@@ -1054,7 +1057,9 @@ sub _round {
 #	}
 #	else {
 		my $tmp = sprintf('%e', $num);
-		$tmp =~ /[eE]([+-]?\d+)$/ or die;
+		$tmp =~ /[eE]([+-]?\d+)$/
+          or die "Error rounding number '$num'. Result '$tmp' was expected to match /[eE][+-]?·\\d+/!";
+        
 		my $exp = $1 - $digit;
 
 		my ($bef, $aft);

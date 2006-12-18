@@ -13,8 +13,7 @@ no_index:
     - t
 requires: 
   Math::BigFloat: 0
-  Math::SymbolicX::Inline: 1.00
   Params::Util: 0.10
   perl: 5.6.0
   prefork: 1.00
-version: 0.06
+version: 0.07

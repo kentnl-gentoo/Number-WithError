@@ -6,7 +6,7 @@ use warnings;
 use Params::Util qw/_ARRAY _INSTANCE _ARRAY0/;
 use prefork 'Math::BigFloat';
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 use base 'Exporter';
 our @EXPORT_OK = qw(
@@ -1048,8 +1048,8 @@ sub _round {
 	
 	my $num = ref($number) ? $number->copy() : $number;
 	
-	return $num if not defined $digit;
-    return $num if $num =~ /^nan$/i;
+	return "$num" if not defined $digit;
+    return "$num" if $num =~ /^nan$/i;
 
 #	if (ref($num)) {	
 #		my $rounded = $num->ffround($digit, 'odd')->bsstr();
@@ -1140,7 +1140,6 @@ sub round {
 			$str .= ' +/- ' . _round($err, $sig);
 		}
 	}
-
 	return $str;	
 }
 
